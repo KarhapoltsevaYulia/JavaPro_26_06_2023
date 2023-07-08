@@ -25,9 +25,7 @@ public class Employee {
     public void setPhone(String phone) {
         this.phone = phone;
     }
-    public void setAge(int age) {
-        this.age = age;
-    }
+
     public String getFullName() {
         return fullName;
     }
