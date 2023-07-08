@@ -5,7 +5,7 @@ public class App {
         Car car = new Car();
         car.start();
         Employee employee = new Employee("a","b","c","d",10);
-        employee.getFullName();
+        employee.setFullName("Ivanov I.O.");
     }
 
 }
