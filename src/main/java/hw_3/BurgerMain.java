@@ -5,7 +5,7 @@ public class BurgerMain {
 
         Burger burger = new Burger("Bun","Meat","Chesse","Salute","Mayonnaise");
         Burger burgerDiet = new Burger("Bun","Meat","Chesse","Salute");
-        Burger burgerMeat = new Burger("Bun",true,"Meat","Chesse",
-                "Salute","Mayonnaise");
+        Burger burgerMeat = new Burger("Bun","Meat","Chesse","Salute",
+              "Mayonnaise",true);
     }
 }
