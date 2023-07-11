@@ -1,17 +1,19 @@
 package hw_4;
 
-import java.util.Scanner;
+public class Cat extends Animals implements Runnable {
+    // кіт біг 200 метрів,  не вміє плавати
+    private static final int maxCatRun = 200;
+    private static int counterCat;
 
-public class Cat extends Animals{
     public Cat(String name) {
         super(name);
+        counterCat++;
     }
-
-    // кіт біг 200 метрів
-    //кіт не вміє плавати
+    public static int getCounterCat() {
+        return counterCat;
+    }
     @Override
-    String running(int lengthObstacles){
-        return this.name +" пробіг "+lengthObstacles+" метрів";
+    public void runningInt(int lengthObstacles){
+        System.out.println(this.name +" пробіг "+сapacityСheckRunInt(lengthObstacles,maxCatRun,this.name)+" метрів");
     }
-
 }
