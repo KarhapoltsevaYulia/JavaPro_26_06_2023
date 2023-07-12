@@ -1,56 +1,58 @@
 package hw_3;
 
 public class Burger {
-        private String bun;
-        private String meat;
-        private String cheese;
-        private String green;
-        private String mayonnaise;
-        private boolean doubleMeat = false;
-        private boolean vubor =false;
+        private BunType bun;
+        private CheeseType cheese;
+        private GreenType green;
+        private MeatType meat;
+        private int counterMeat;
+        private boolean mayonnaise;
 
-
-    public Burger(String bun, String meat, String cheese, String green) {
-        this.vubor=true;
-        this.bun = bun;
-        this.meat = meat;
-        this.cheese = cheese;
-        this.green = green;
-        this.printBurger(bun,meat, cheese, green,null,false);
+    public Burger() {
+        this.bun = bun.WHEATBUN;
+        this.cheese = cheese.MILKCHEESE;
+        this.green = green.GREENERY;
     }
-    public Burger(String bun, String meat, String cheese, String green, String mayonnaise){
-        this(bun,meat,cheese,green);
-        this.vubor=true;
-        this.mayonnaise=mayonnaise;
-        this.printBurger(bun,meat, cheese, green,mayonnaise,false);
+    public Burger(MeatType meat, int counterMeat,boolean mayonnaise){
+        this();
+        this.meat = meat.BEEF;
+        this.counterMeat=2;
+        this.mayonnaise= true;
     }
-    public Burger(String bun, String meat, String cheese, String green, String mayonnaise, boolean doubleMeat){
-        this(bun,meat,cheese,green,mayonnaise);
-        this.vubor=true;
-        this.doubleMeat=doubleMeat;
-        this.printBurger(bun,meat, cheese, green,mayonnaise,doubleMeat);
-
+    public Burger(MeatType meat, int counterMeat){
+        this();
+        this.meat = meat.CHICKEN;
+        this.counterMeat=1;
     }
 
-    private void printBurger(String bun, String meat, String cheese, String green,String mayonnaise,boolean doubleMeat){
+    @Override
+    public String toString() {
+        return "Burger{" +
+                "bun=" + this.bun +
+                ", cheese=" + this.cheese +
+                ", green=" + this.green +
+                ", meat=" + this.meat +
+                ", counterMeat=" + this.counterMeat +
+                ", mayonnaise=" + this.mayonnaise +
+                '}';
+    }
 
-
-
-        if (this.doubleMeat) {
-            System.out.println("BurgerDoubleMeat: " + this.bun + ", Double" + this.meat +
-                    "," + this.cheese + ", " + this.green + ", " + this.mayonnaise);
-        }
-        if (this.doubleMeat!=true && ) {
-        /*else {
-            if (this.mayonnaise != null) {
-                System.out.println("Burger: " + this.bun + "," + this.meat +
-                        "," + this.cheese + ", " + this.green + ", " + this.mayonnaise);
-            } else { if (this.mayonnaise==null)
-                System.out.println("BurgerDiet: " + this.bun + "," + this.meat +
-                        "," + this.cheese + ", " + this.green);
-
-            }
-        }*/
-        }
-        }
+    public enum BunType {
+        WHEATBUN,
+        BRANBUN;
+    }
+    public enum CheeseType {
+        MILKCHEESE,
+        HARDCHEESE
+    }
+    public enum GreenType {
+        SALAD,
+        GREENERY
+    }
+    public enum MeatType {
+        CHICKEN,
+        PORK,
+        BEEF
+    }
+}
 
