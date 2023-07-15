@@ -13,6 +13,6 @@ public class App {
         System.out.println(iceMilk.toString());
         Ice iceMil = Ice.builder(Ice.MilkType.COWS, Ice.CreamType.VEGETABLE, Ice.ButterType.BUTTER_78,Ice.SugarType.REEDY)
                 .build();
-
+        System.out.println(iceMil.toString());
     }
 }
