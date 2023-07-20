@@ -1,4 +1,4 @@
-package hw_6;
+package hw_6.Figure;
 
 public interface BaseGeometricFigure {
     double areaFigureInt();

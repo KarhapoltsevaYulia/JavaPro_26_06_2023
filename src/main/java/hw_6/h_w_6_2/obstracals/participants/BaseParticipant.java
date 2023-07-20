@@ -1,13 +1,13 @@
-package hw_6.participant;
+package hw_6.h_w_6_2.obstracals.participants;
 
 public abstract class BaseParticipant {
-    String name;
-    private int capacityRun;
-    private int capacityJump;
+    public  String name;
+    public int capacityRun;
+    public int capacityJump;
 
-    public BaseParticipant(String name, int capacityJump, int capacityRun) {
+    public BaseParticipant(String name) {
         this.name = name;
-        this.capacityJump = capacityJump;
-        this.capacityRun = capacityRun;
     }
+    public abstract int startRun();
+    public abstract int startJump();
 }

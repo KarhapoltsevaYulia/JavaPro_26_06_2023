@@ -1,10 +1,11 @@
-package hw_6.obstracal;
-import hw_6.participant.BaseParticipant;
+package hw_6.h_w_6_2.obstracals;
+import hw_6.h_w_6_2.obstracals.participants.BaseParticipant;
 
 public abstract class BaseObstracl {
     int lenghtObstracl;
-    int abilityParticipant;
-    String nameObstracl;
-    Object nameParticipant;
+    boolean could=true;
+    public BaseObstracl(int lenghtObstracl) {
+        this.lenghtObstracl = lenghtObstracl;
+    }
     public abstract void start(BaseParticipant baseParticipant);
 }

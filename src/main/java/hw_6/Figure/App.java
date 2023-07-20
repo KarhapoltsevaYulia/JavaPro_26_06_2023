@@ -1,4 +1,4 @@
-package hw_6;
+package hw_6.Figure;
 
 public class App {
     public static void main(String[] args) {

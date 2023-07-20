@@ -1,4 +1,4 @@
-package hw_6;
+package hw_6.Figure;
 
 public  class Triangle implements BaseGeometricFigure{
     private  double areaTriangle;
