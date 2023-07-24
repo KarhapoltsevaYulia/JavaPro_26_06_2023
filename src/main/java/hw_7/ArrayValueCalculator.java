@@ -11,26 +11,18 @@ public class ArrayValueCalculator {
         equalityTest(arrays);
     }
 
-    private void equalityTest(String[]... arrays) throws ArrayIndexOutOfBoundsException,NullPointerException {
-        try {
-            if ((arrays == null)|| (arrays.length==0)) {
-                throw new NullPointerException("Array = null");
-            }
+    private void equalityTest(String[]... arrays) throws ArrayIndexOutOfBoundsException {
+
             try {
                 for (String[] arr : arrays) {
                     if (arrays.length != this.length || arr.length != this.length) {
                         throw new UncheckedArraySizeException("Matrix != 4x4");
-                      ///  throw new ArrayIndexOutOfBoundsException("Matrix != 4x4");
                     }
                 }
                 doCalc(arrays);
             } catch (UncheckedArraySizeException e){
                 throw new RuntimeException(e.message);
-               // System.err.print(e.getMessage());
             }
-        } catch (NullPointerException e) {
-            System.err.print(e.getMessage());
-        }
     }
 
     public void doCalc (String[]... arrays) throws NumberFormatException {
