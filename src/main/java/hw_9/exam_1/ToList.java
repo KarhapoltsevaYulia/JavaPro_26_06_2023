@@ -1,4 +1,4 @@
-package hw_9;
+package hw_9.exam_1;
 
 import java.util.ArrayList;
 import java.util.Arrays;
