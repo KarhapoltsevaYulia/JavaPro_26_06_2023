@@ -1,4 +1,4 @@
-package hw_9;
+package hw_9.exam_1;
 
 public class App {
     public static void main(String[] args) {

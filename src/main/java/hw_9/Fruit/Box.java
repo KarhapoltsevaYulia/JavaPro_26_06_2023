@@ -1,15 +1,13 @@
-package hw_9;
-
+package hw_9.Fruit;
 import java.util.*;
 
-public class Box <B extends Fruit>  {
+public class Box <B extends BaseFruit>  {
     private Object[] fruitArray;
     /**
      * it is index for {@link #fruitArray}
      */
     private int index;
     private int lengthArray;
-    private int newLenght;
     private float weight;
     private float weightBox;
 
@@ -43,7 +41,6 @@ public class Box <B extends Fruit>  {
         if (this.index==0) {
             if (examplArrays(fruits)) {
                 addManyFruit(fruits);
-
                 return true;
             }
         } else {
@@ -57,39 +54,45 @@ public class Box <B extends Fruit>  {
         return false;
     }
     public float getWeight(){
-        if (fruitArray[0] instanceof Orange){
-            weight = Orange.WEIGHT;
-        } else{
-            if (fruitArray[0] instanceof Apple) {
-                weight = Apple.WEIGHT;
+        if (index!=0) {
+            if (fruitArray[0] instanceof Orange){
+                weight = Orange.WEIGHT;
+            } else{
+                if (fruitArray[0] instanceof Apple) {
+                    weight = Apple.WEIGHT;
+                }
             }
-        }
-        return this.weightBox=weight*this.index;
+            return this.weightBox=weight*this.index;
+        } else System.out.println("Ви не додали у коробку фруктів");
+        return 0.0f;
     }
     public boolean compare(Box... box){
 
-        for (int i=0; i<box.length; i++){
-            if (box[i].weightBox==this.weightBox) {
-                if (box[i].fruitArray[0].getClass() == this.fruitArray[0].getClass()) {
-                    System.out.println("У цих коробках лежать однакові фрукти " + this.fruitArray[0].getClass());
-                    System.out.println("Box " + (i + 1) + " еквівалентна по вазі з поточною Вох, і важить кожна з них " +
-                            +box[i].weightBox);
-                    merge(box);
+            for (int i = 0; i < box.length; i++) {
+                if(this.weightBox!=0.0f && box[i].weightBox!=0.0f ) {
+                if (box[i].weightBox == this.weightBox) {
+                    if (box[i].fruitArray[0].getClass() == this.fruitArray[0].getClass()) {
+                        System.out.println("У цих коробках лежать однакові фрукти " + this.fruitArray[0].getClass());
+                        System.out.println("Box " + (i + 1) + " еквівалентна по вазі з поточною Вох, і важить кожна з них " +
+                                +box[i].weightBox);
+                        merge(box);
+                    } else {
+                        System.out.println("У цих коробках лежать різні фрукти у першій "
+                                + box[i].fruitArray[0].getClass() + "у другій " + this.fruitArray[0].getClass());
+                        System.out.println("Aле важать коробки однаково");
+                    }
+                    return true;
                 } else {
-                    System.out.println("У цих коробках лежать різні фрукти у першій "
-                            + box[i].fruitArray[0].getClass() + "у другій " + this.fruitArray[0].getClass());
-                    System.out.println("Aле важать коробки однаково");
+                    System.out.println();
+                    System.out.println("Box " + (i + 1) + " важить " + box[i].weightBox + " не рівна по вазі з поточною Вох, " +
+                            "яка важить " + this.weightBox);
+                    if (box[i].fruitArray[0].getClass() == this.fruitArray[0].getClass()) {
+                        System.out.println("У цих коробках лежать однакові фрукти " + this.fruitArray[0].getClass());
+                        merge(box);
+                    } else System.out.println("У цих коробках лежать різні фрукти у першій "
+                            + box[i].fruitArray[0].getClass() + " у другій " + this.fruitArray[0].getClass());
                 }
-                return true;
-            }else {
-                System.out.println("Box "+ (i+1)+" важить "+ box[i].weightBox+" не рівна по вазі з поточною Вох, " +
-                        "яка важить "+this.weightBox );
-                if (box[i].fruitArray[0].getClass()==this.fruitArray[0].getClass()) {
-                    System.out.println("У цих коробках лежать однакові фрукти "+this.fruitArray[0].getClass());
-                    merge(box);
-                } else System.out.println("У цих коробках лежать різні фрукти у першій "
-                        + box[i].fruitArray[0].getClass() + " у другій " + this.fruitArray[0].getClass());
-            }
+            } else System.out.println("Ви не додали фруктів у коробку, чи не зважили коробку");
         }
         return false;
     }
@@ -118,13 +121,12 @@ public class Box <B extends Fruit>  {
       }
       for (int i=0; i<box.length; i++){
           for(int j=0; j<box[i].lengthArray;j++)
-          System.out.println(box[i].fruitArray[j]);
+              System.out.println(box[i].fruitArray[j]);
       }
-        System.out.println();
-        for (int i=0; i<fruitArray.length; i++){
-                System.out.println(fruitArray[i]);
-        }
-
+      System.out.println();
+      for (int i=0; i<fruitArray.length; i++){
+          System.out.println(fruitArray[i]);
+      }
     }
     private void addOneFruit(B fruit){
         this.fruitArray[this.index] = fruit;
@@ -162,11 +164,9 @@ public class Box <B extends Fruit>  {
 
         for (int i = 0; i < fruits.length; i++) {
             if (fruitArray[0].getClass()==fruits[i].getClass()){
-               System.out.println(fruits[i].getClass());
                 return true;
             }
         }
         return false;
     }
-
 }
