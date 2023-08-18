@@ -35,14 +35,15 @@ public class CoffeeOrderBoard  extends Order{
     }
     public void deliver(int counterNumber){
 
-        for(int key: mapOrder.keySet()){
-            if (key>0){
-                if (mapOrder.keySet().remove(counterNumber)) {
-                    System.out.println("Zakaz  "+ key+" vudano!!!!");
-                    break;
+            for (int key : mapOrder.keySet()) {
+                if (key > 0) {
+                    if (mapOrder.keySet().remove(counterNumber)) {
+                        System.out.println("Zakaz  " + key + " vudano!!!!");
+                        break;
+                    }
                 }
             }
-        }
+
     }
     public void draw(){
         System.out.println("Невиконані замовлення!");

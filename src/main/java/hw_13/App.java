@@ -9,7 +9,7 @@ public class App {
         coffeeOrderBoard.add();
         coffeeOrderBoard.draw();
         coffeeOrderBoard.deliver();
-        coffeeOrderBoard.deliver(1);
+        coffeeOrderBoard.deliver(-100);
         coffeeOrderBoard.draw();
         coffeeOrderBoard.deliver();
         coffeeOrderBoard.draw();
