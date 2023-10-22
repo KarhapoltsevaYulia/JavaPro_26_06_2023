@@ -1,7 +1,7 @@
 CREATE TABLE Homework (
-   ID INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-   NAME VARCHAR(256) NOT NULL,
-   DESCRIPTION VARCHAR(256) NOT NULL
+ID INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+NAME VARCHAR(256) NOT NULL,
+DESCRIPTION VARCHAR(256) NOT NULL
 );
 
 insert into homework(NAME, DESCRIPTION) values ('Anna', 'Student1');
@@ -30,9 +30,9 @@ insert into Lesson(name, updatedat) values ('JAVAExcellent',44);
 SELECT *FROM Lesson;
 
 CREATE TABLE Schedule (
-  ID INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-  NAME VARCHAR(256) NOT NULL,
-  updatedAt TIME NOT NULL
+ID INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+NAME VARCHAR(256) NOT NULL,
+updatedAt TIME NOT NULL
 );
 
 ALTER TABLE Schedule ADD lessons  INT;
@@ -45,10 +45,10 @@ insert into Schedule(name, updatedat) values ('JAVAExcellent',44);
 SELECT *FROM Schedule;
 
 create  table Lessons(
-    id_Lesson int not null,
-    id_Schedule int not null,
-    FOREIGN KEY (id_Lesson) REFERENCES Schedule(ID),
-    FOREIGN KEY (id_Schedule) REFERENCES Lesson(ID)
+id_Lesson int not null,
+id_Schedule int not null,
+FOREIGN KEY (id_Lesson) REFERENCES Schedule(ID),
+FOREIGN KEY (id_Schedule) REFERENCES Lesson(ID)
 );
 
 SELECT *FROM Lessons;
