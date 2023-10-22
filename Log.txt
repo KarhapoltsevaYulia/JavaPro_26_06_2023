@@ -1,0 +1,5 @@
+1|true|false
+2|true|false
+3|true|false
+4|false|false
+5|true|true
