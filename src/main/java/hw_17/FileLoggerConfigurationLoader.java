@@ -1,6 +1,4 @@
-package HW_17_1;
-
-import hw_17.FileLoggerConfiguration;
+package hw_17;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;

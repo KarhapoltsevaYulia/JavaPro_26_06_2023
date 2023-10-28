@@ -1,4 +1,4 @@
-package HW_17_1;
+package hw_17;
 
 import java.time.LocalDateTime;
 import java.util.HashMap;

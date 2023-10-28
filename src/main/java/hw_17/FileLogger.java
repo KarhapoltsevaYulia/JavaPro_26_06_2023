@@ -1,8 +1,6 @@
-package HW_17_1;
+package hw_17;
 
 import hw_17.Exception.FileMaxSizeReachedException;
-import hw_17.FileLoggerConfiguration;
-import hw_17.FileLoggerConfigurationLoader;
 
 import java.io.*;
 
