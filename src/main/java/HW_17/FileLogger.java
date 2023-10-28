@@ -1,5 +1,9 @@
 package HW_17;
+
+
+
 import HW_17.Exception.FileMaxSizeReachedException;
+
 import java.io.*;
 
 public class FileLogger extends FileLoggerConfiguration {
@@ -25,7 +29,7 @@ public class FileLogger extends FileLoggerConfiguration {
                 file.createNewFile();
             }
 
-        } catch (IOException | FileMaxSizeReachedException e) {
+        } catch (IOException e) {
             throw new RuntimeException(e);
         }
     }

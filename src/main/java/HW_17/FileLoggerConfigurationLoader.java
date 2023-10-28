@@ -1,13 +1,14 @@
 package HW_17;
 
+
+
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
 
-public class FileLoggerConfigurationLoader extends FileLoggerConfiguration{
-
+public class FileLoggerConfigurationLoader extends FileLoggerConfiguration {
     public static void load(String fileName) throws FileNotFoundException {
         FileLoggerConfiguration fileLoggerConfiguration = new FileLoggerConfiguration();
         try(BufferedReader bufferedReader = new BufferedReader(new FileReader(fileName))){
