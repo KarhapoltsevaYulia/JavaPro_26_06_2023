@@ -1,4 +1,4 @@
-package hw_17;
+package HW_17;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
