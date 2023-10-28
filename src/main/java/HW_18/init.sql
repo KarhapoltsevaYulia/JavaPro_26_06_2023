@@ -4,10 +4,10 @@ NAME VARCHAR(256) NOT NULL,
 DESCRIPTION VARCHAR(256) NOT NULL
 );
 
-insert into homework(NAME, DESCRIPTION) values ('Anna', 'Student1');
-insert into homework(NAME, DESCRIPTION) values ('Olga', 'Student2');
-insert into homework(NAME, DESCRIPTION) values ('Roma', 'Student3');
-select * from homework;
+ insert into homework(NAME, DESCRIPTION) values ('Anna', 'Student1');
+ insert into homework(NAME, DESCRIPTION) values ('Olga', 'Student2');
+ insert into homework(NAME, DESCRIPTION) values ('Roma', 'Student3');
+ select * from homework;
 
 CREATE TABLE Lesson (
  ID INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
