@@ -1,5 +1,5 @@
-package hw_17;
-import hw_17.Exception.FileMaxSizeReachedException;
+package HW_17;
+import HW_17.Exception.FileMaxSizeReachedException;
 import java.io.*;
 
 public class FileLogger extends FileLoggerConfiguration {
