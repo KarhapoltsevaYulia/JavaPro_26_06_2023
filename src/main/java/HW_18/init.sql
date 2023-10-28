@@ -51,4 +51,4 @@ FOREIGN KEY (id_Lesson) REFERENCES Schedule(ID),
 FOREIGN KEY (id_Schedule) REFERENCES Lesson(ID)
 );
 
-SELECT *FROM Lessons;
+ SELECT *FROM Lessons;
