@@ -35,7 +35,7 @@ NAME VARCHAR(256) NOT NULL,
 updatedAt TIME NOT NULL
 );
 
- ALTER TABLE Schedule ADD lessons  INT;
+ALTER TABLE Schedule ADD lessons  INT;
 alter table Schedule
     Add   FOREIGN KEY Schedule(id) REFERENCES Lesson(id);
 
@@ -44,11 +44,11 @@ insert into Schedule(name, updatedat) values ('JavaPro',46);
 insert into Schedule(name, updatedat) values ('JAVAExcellent',44);
 SELECT *FROM Schedule;
 
- create  table Lessons(
+create  table Lessons(
 id_Lesson int not null,
 id_Schedule int not null,
 FOREIGN KEY (id_Lesson) REFERENCES Schedule(ID),
 FOREIGN KEY (id_Schedule) REFERENCES Lesson(ID)
 );
 
- SELECT *FROM Lessons;
+SELECT *FROM Lessons;
