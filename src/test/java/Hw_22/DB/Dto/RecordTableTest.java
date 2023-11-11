@@ -6,7 +6,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 public class RecordTableTest {
-    private RecordTable recordTable ;//= new RecordTable("Test");
+    private RecordTable recordTable ;
     private String dataTest;
     private  int idTest;
     @Before

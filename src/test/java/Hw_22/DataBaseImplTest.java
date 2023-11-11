@@ -18,12 +18,9 @@ import java.sql.Statement;
 
 public class DataBaseImplTest {
     private DataBaseImpl dataBase;
-    private RecordTableDao recordTableDao = Mockito.mock(RecordTableDao.class);
     private DataBaseConnection dataBaseConnectionMock = Mockito.mock(DataBaseConnection.class);
-    private RecordTable recordTable = Mockito.mock(RecordTable.class);
     private Connection connectionMock = Mockito.mock(Connection.class);
     private Statement statementMock = Mockito.mock(Statement.class);
-    private DriverManager driverManagerMock = Mockito.mock(DriverManager.class);
     private FileLoaderProperties fileLoaderProperties= Mockito.mock(FileLoaderProperties.class);
     private String fileName;
     private Object[] data;
@@ -47,15 +44,6 @@ public class DataBaseImplTest {
         Mockito.when(statementMock.executeQuery(SqlRequest.ADDRECORD.getNameSqlRequest())).thenReturn(resultSet);
         Mockito.when(connectionMock.createStatement()).thenReturn(statementMock);
 
-        /*ResultSet resultSet = Mockito.mock(ResultSet.class);
-Mockito.when(resultSet.next()).thenReturn(true).thenReturn(true).thenReturn(true).thenReturn(false);
-Mockito.when(resultSet.getString(1)).thenReturn("table_r3").thenReturn("table_r1").thenReturn("table_r2");
-
-Statement statement = Mockito.mock(Statement.class);
-Mockito.when(statement.executeQuery("SELECT name FROM tables")).thenReturn(resultSet);
-
-Connection jdbcConnection = Mockito.mock(Connection.class);
-Mockito.when(jdbcConnection.createStatement()).thenReturn(statement);*/
     }
 
 

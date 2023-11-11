@@ -2,9 +2,6 @@ package Hw_22.DB;
 
 import org.junit.Before;
 import org.junit.Test;
-
-import java.sql.SQLException;
-
 import static org.junit.Assert.*;
 
 public class DataBaseConnectionTest {
@@ -23,7 +20,6 @@ public class DataBaseConnectionTest {
           dataBaseConnection.beginAccess(null);
         });
         assertNull(thrown.getMessage());
-
     }
 
 }

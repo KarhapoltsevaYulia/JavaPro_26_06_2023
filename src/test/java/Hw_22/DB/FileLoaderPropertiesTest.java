@@ -16,7 +16,6 @@ public class FileLoaderPropertiesTest {
     private  int passwordUser;
     private  int urlDataBase = 2;
     private FileLoaderProperties fileLoaderProperties;
-    private File file= Mockito.mock(File.class);
     @Before
     public  void setUp(){
         fileLoaderProperties= new FileLoaderProperties();
@@ -32,12 +31,4 @@ public class FileLoaderPropertiesTest {
         Assert.assertEquals(urlDataBase,fileLoaderProperties.getUrlDataBase());
 
     }
-//    @Test
-//    public void loadTest() throws IOException {
-//        FileReader fileReader = new FileReader(file);
-//        BufferedReader bufferedReader = new BufferedReader(fileReader);
-//      Mockito.when(bufferedReader.readLine()).thenReturn(String.valueOf(bufferedReader));
-//       // Mockito.when(fileLoaderProperties.load(Mockito.anyString())).thenReturn(3);
-//    }
-
 }

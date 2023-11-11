@@ -3,13 +3,9 @@ package Hw_22;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.Test;
-
 import java.io.*;
 import java.nio.file.Files;
-import java.util.Arrays;
-
 import static org.junit.Assert.*;
-
 import static org.junit.Assert.assertEquals;
 
 public class FileImplTest {
@@ -17,7 +13,7 @@ public class FileImplTest {
     private Object[] strings;
     private String nameFile;
     private static File dir;
-    private Object[] prop;// = line.split(" ");
+    private Object[] prop;
 
     @Before
     public void createCollection() throws IOException {
